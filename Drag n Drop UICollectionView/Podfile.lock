@@ -1,0 +1,16 @@
+PODS:
+  - AnimatableReload (0.2.0)
+
+DEPENDENCIES:
+  - AnimatableReload
+
+SPEC REPOS:
+  trunk:
+    - AnimatableReload
+
+SPEC CHECKSUMS:
+  AnimatableReload: 9576d3019bfb103f76b5f37fa6f8915bd8307527
+
+PODFILE CHECKSUM: acda313d2382007480ef6f01ea8332cdda0e305e
+
+COCOAPODS: 1.9.3

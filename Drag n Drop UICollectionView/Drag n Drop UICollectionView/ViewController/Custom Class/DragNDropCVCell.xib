@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DragNDropCVCell" id="gTV-IL-0wX" customClass="DragNDropCVCell" customModule="Drag_n_Drop_UICollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phj-vH-wIi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD5-qU-2BJ">
+                        <rect key="frame" x="186" y="24.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="phj-vH-wIi" secondAttribute="trailing" id="AcJ-64-1t2"/>
+                <constraint firstAttribute="bottom" secondItem="phj-vH-wIi" secondAttribute="bottom" id="FJw-VS-AOd"/>
+                <constraint firstItem="phj-vH-wIi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ajC-hG-0Rq"/>
+                <constraint firstItem="phj-vH-wIi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jHS-2b-z4g"/>
+                <constraint firstItem="HD5-qU-2BJ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="tKl-QW-eTm"/>
+                <constraint firstItem="HD5-qU-2BJ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ytp-wx-H6N"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="bgUIView" destination="phj-vH-wIi" id="Cux-bg-dtM"/>
+                <outlet property="label" destination="HD5-qU-2BJ" id="sSU-lw-eSb"/>
+            </connections>
+            <point key="canvasLocation" x="-84" y="-11"/>
+        </collectionViewCell>
+    </objects>
+</document>
