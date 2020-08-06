@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DynamicLayoutCVCell" id="gTV-IL-0wX" customClass="DynamicLayoutCVCell" customModule="Dynamic_UICollectionViewFlowLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRV-qp-Nvn">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gWo-0M-yiq">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gWo-0M-yiq" firstAttribute="top" secondItem="cRV-qp-Nvn" secondAttribute="top" id="MNI-NB-dkX"/>
+                            <constraint firstAttribute="bottom" secondItem="gWo-0M-yiq" secondAttribute="bottom" id="ZiA-e5-fCv"/>
+                            <constraint firstAttribute="trailing" secondItem="gWo-0M-yiq" secondAttribute="trailing" id="hdD-Nf-LyW"/>
+                            <constraint firstItem="gWo-0M-yiq" firstAttribute="leading" secondItem="cRV-qp-Nvn" secondAttribute="leading" id="kq1-ed-NUF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="cRV-qp-Nvn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9V1-F9-pTj"/>
+                <constraint firstItem="cRV-qp-Nvn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9fl-14-vtn"/>
+                <constraint firstAttribute="trailing" secondItem="cRV-qp-Nvn" secondAttribute="trailing" id="GEb-PP-9BM"/>
+                <constraint firstAttribute="bottom" secondItem="cRV-qp-Nvn" secondAttribute="bottom" id="jYW-Ul-JzP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="containerView" destination="cRV-qp-Nvn" id="Obq-BD-NaA"/>
+                <outlet property="dynamicImage" destination="gWo-0M-yiq" id="mpy-LR-Qqa"/>
+            </connections>
+            <point key="canvasLocation" x="135" y="136"/>
+        </collectionViewCell>
+    </objects>
+</document>
