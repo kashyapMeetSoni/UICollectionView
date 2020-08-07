@@ -12,7 +12,7 @@ struct Photos {
     var image: UIImage
 }
 
-class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, DynamicLayoutDelegate {
+class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, DynamicLayoutDelegate, UIScrollViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -39,6 +39,16 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         }
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        for view in collectionView.visibleCells {
+            if let view:DynamicLayoutCVCell = view as? DynamicLayoutCVCell {
+               let yOffset:CGFloat = ((collectionView.contentOffset.y - view.frame.origin.y) / 200) * 15
+                view.setImageOffset(imageOffset: CGPoint(x: 0, y: yOffset))
+                
+            }
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photo.count
     }
@@ -46,6 +56,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DynamicLayoutCVCell", for: indexPath) as! DynamicLayoutCVCell
         cell.dynamicImage.image = photo[indexPath.row].image
+        let yOffset:CGFloat = ((collectionView.contentOffset.y - cell.frame.origin.y) / 200) * 25
+        cell.imageOffset = CGPoint(x: 0, y: yOffset)
         return cell
     }
     
